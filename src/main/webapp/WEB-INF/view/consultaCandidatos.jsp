@@ -13,7 +13,6 @@
         <div class="card-fac shadow-lg">
             <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-secondary pb-3">
                 <h2 class="text-white">Relatório de Candidatos</h2>
-                <a href="${pageContext.request.contextPath}/login/" class="btn btn-outline-secondary btn-sm">Sair</a>
             </div>
 
             <div class="row mb-4 align-items-end">
