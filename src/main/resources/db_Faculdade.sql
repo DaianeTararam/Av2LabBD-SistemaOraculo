@@ -14,6 +14,7 @@ create table log_curiosidade (
 id int identity(1, 1) not null,
 id_curiosidade int not null
 primary key(id)
+foreign key(id_curiosidade) references curiosidade(id)
 )
 go
 
@@ -128,21 +129,8 @@ go
 
 
 
--- 1. Ver se as tabelas existem
-SELECT name FROM sys.tables;
-
--- 2. Ver se os times foram inseridos (Requisito do PDF)
-SELECT * FROM time;
-
--- 3. Ver se as curiosidades dos TXTs subiram
-SELECT * FROM curiosidade;
-
--- 4. Ver se a tabela de candidatos está pronta (deve estar vazia)
-SELECT * FROM candidato;
-
-SELECT t.nome, MIN(c.id) AS primeiro_id, MAX(c.id) AS ultimo_id, COUNT(*) AS total
-FROM curiosidade c
-JOIN time t ON c.id_time = t.id
-GROUP BY t.nome;
-
+SELECT name FROM sys.tables
+SELECT * FROM time
+SELECT * FROM curiosidade
+SELECT * FROM candidato
 
