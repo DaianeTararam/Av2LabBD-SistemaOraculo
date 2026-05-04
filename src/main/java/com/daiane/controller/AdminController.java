@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.daiane.repository.ICandidatoRepository;
-import com.daiane.repository.IUsuarioRepository; // Precisaremos criar essa interface simples
+import com.daiane.repository.IUsuarioRepository;
 
 @Controller
 public class AdminController {
@@ -33,7 +33,7 @@ public class AdminController {
     public String realizarLogin(@RequestParam("usuario") String usuario, 
                                 @RequestParam("senha") String senha, Model model) {
         
-        // Chamando a procedure sp_validar_login que você criou no banco
+        // Chamando a procedure sp_validar_login que criei no banco
     	int resultado = uRepo.validarLoginProcedure(usuario, senha);
 
     	if (resultado == 1) { // 1 significa que a procedure retornou TRUE
