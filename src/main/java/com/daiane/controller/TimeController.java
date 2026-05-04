@@ -48,7 +48,7 @@ public class TimeController {
         }
     }
 	
-	// Abre a página inicial (o index)
+	// Abre o index
 	@GetMapping("/")
 	public String irParaHome() {
 	    return "index";
@@ -92,7 +92,7 @@ public class TimeController {
         }
     }
     
-    // Faz o sorteio da curiosidade chamando aquela Procedure que a gente criou no banco
+    // Faz o sorteio da curiosidade chamando aquela Procedure do banco
     @GetMapping("/sortear")
     public ModelAndView sortear(@RequestParam("idTime") int idTime, ModelMap model) {
         try {
